@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insurance Company</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #main{
+            display: flex;
+            align-items:flex-start;
+            max-height: 1200px;
+            max-width: 1000px; 
+        }
+        video{
+            display: flex;
+            align-items:flex-start;
+            max-height: 450px;
+            max-width: 450px;
+            margin:0;
+            padding-top: 43px;
+              
+        }
+        li{
+            list-style-type: none;
+        }
+        
+    </style>
 </head>
 <body>
-    
+   <div style="display: flex;">
+    <div>
+        <video controls autoplay muted id="main">
+                <source src="policy.mp4">
+        </video>
+    </div>
+    <ul>
+        <li><video src="maxlife.mp4" controls></video></li>
+        <li><video src="lic.mp4" controls></video></li>
+    </ul>
+   </div>
 </body>
 </html>
