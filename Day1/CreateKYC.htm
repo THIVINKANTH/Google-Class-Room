@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Details</title>
+    <style>
+        /* using css in internal */
+        #table
+        {
+            /* table design */
+            margin-left: 550px;
+            margin-right: 500px;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            padding: 10px;
+            border-spacing: 10px;
+            border: 7px;
+            border-color: red;
+            box-shadow: 4px 9px 12px rgb(241, 6, 241);
+            background-image: linear-gradient(green,yellow);
+            font-size: 20px;
+            font-weight: bold;
+            /* font-family: 'Times New Roman', Times, serif;
+            font-style: italic; */
+            
+        }
+        #input{
+            width: 200px;
+            height: 25px;
+        }
+        textarea{
+            width: 200px;
+            height: 50px;
+        }
+        #register
+        {
+            font-weight: bold;
+            background-color: rgb(138, 244, 138); width: 100px; height: 30px;
+            border-radius: 20px;
+            height: 40px;
+            width: 150px;
+            cursor: pointer;
+            margin: 15px;
+            
+        }
+        #cancel
+        {
+            font-weight: bold;
+            background-color: rgb(238, 133, 133); width: 100px; height: 30px;
+            border-radius: 20px;
+            height: 40px;
+            width: 150px;
+            cursor: pointer;
+            
+        }
+        #register:hover{
+            /* on mouse enter colour changing performance */
+           background-color: #047308;
+        }
+        #cancel:hover{
+    
+           background-color: #f20808;
+        }
+        #gender{
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form style="text-align: center;">
+        <h1 style="color: blue;">Zealous Bank</h1>
+        <small style="margin-top: auto;">Enter your KYC Details</small>
+        <hr>
+        <table style="text-align: center;" id="table">
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" placeholder="EX:Thivin" required id="input">
+                    </td>
+                </tr>
+                <tr>
+                    <td>PAN Number</td>
+                    <td>
+                        <input type="text" required id="input">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aadhaar Number</td>
+                    <td>
+                        <input type="number" required id="input">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>
+                        <input type="tel" required id="input">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea placeholder="Enter your permanent address" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" value="Male" name="Gender" required id="gender">Male
+                        <input type="radio" value="Female" name="Gender" required id="gender">Female
+                        <input type="radio" value="Others" name="Gender" required id="gender">Others
+                    </td>
+                </tr>
+                <tr>
+                    <td>Account Type</td>
+                    <td>
+                        <select required id="input">
+                            <option selected hidden>Select Account Type</option>
+                            <option >Savings Account</option>
+                            <option>Current Account</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <input type="checkbox" value="I Agree that your terms and conditions" required>I Agree that your terms and conditions <a href="#" style="text-decoration: none;color:blue; font-size: large;" >click here</a>
+        <br>
+        <input type="submit" value="Register" id="register">
+        <input type="reset" value="Cancel" id="cancel">
+    </form>
+</body>
+</html>
