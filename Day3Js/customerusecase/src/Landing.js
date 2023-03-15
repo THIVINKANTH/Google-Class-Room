@@ -1,9 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './Pagedesign.css'
+import { Login } from './Loginpage'
+import { useState } from 'react'
+import LoginIcon from '@mui/icons-material/Login';
 export const LandingPage=()=>
 {
+    const[goin,setGoin]=useState(false)
+    // Landing page
     return(
+        <>
+        {(goin)?
+        <>
+        <Login/>
+        </>
+        :
         <>
         <div class="row justify-content-center mt-5 col-lg-12 col-md-10 col-sm-12">
         <span class="topline">Hello</span>
@@ -23,7 +34,7 @@ export const LandingPage=()=>
                         <li class="text-danger">Give A Missed Call for Home Loans @1234567890</li>
                     </ul>
                     {/*for using go through kyc register page*/}
-                   <button class="btn btn-outline-danger" id="register">Login</button>
+                   <button class="btn btn-outline-danger" id="register" onClick={setGoin}><LoginIcon></LoginIcon>Login</button>
                 </div>
             </div>
         </div>
@@ -37,13 +48,13 @@ export const LandingPage=()=>
                         <li>Jewel to Cash at express speed, visit Zealous today</li>
                         <li>Jewel Loans for Agriculture, MSME, Domestic purposes with lower interest rate and attractive features</li>
                     </ul>
-                   <button class="btn btn-outline-danger" id="register">Login</button>
+                   <button class="btn btn-outline-danger" id="register" onClick={setGoin}><LoginIcon></LoginIcon>Login</button>
                 </div>
             </div>
         </div>
     </div>
-     {/* java script */}
     
-        </>
+     </>}
+ </>
     )
 }

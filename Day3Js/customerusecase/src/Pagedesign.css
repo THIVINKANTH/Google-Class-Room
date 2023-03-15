@@ -56,3 +56,25 @@ img{
     width: 250px;
     height: 250px;
 }
+#loginpage{
+    background-color: rgb(191, 241, 140);
+}
+label{
+    color: rgb(21, 21, 21);
+    font-weight: bold;
+}
+#send{
+    background-color: rgb(126, 223, 191);
+    font-weight: bold;
+}
+#send:hover{
+    background-color: green;
+}
+#cancel{
+    background-color: rgb(126, 223, 191);
+    font-weight: bold;
+}
+#cancel:hover{
+    background-color: red;
+}
+
