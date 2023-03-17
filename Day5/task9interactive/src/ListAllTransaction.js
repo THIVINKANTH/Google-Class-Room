@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react'
-import { list, remove } from './TranasctionDetails'
+import { list, remove} from './TranasctionDetails'
 import DeleteIcon from '@mui/icons-material/Delete';
 
 
