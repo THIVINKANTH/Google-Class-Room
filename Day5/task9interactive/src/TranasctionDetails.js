@@ -50,6 +50,7 @@ let Customerdetails=[
         "cusPassword":"Thivin@5799"
     }
 ]
+// create new account method
 export const create1=(data)=>
 {
     Customerdetails.push(data)

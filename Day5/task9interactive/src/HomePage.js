@@ -5,6 +5,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import CreditScoreIcon from '@mui/icons-material/CreditScore';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
 export const Home=()=>
 {
     // home page navigation
@@ -18,8 +19,8 @@ export const Home=()=>
                     <Navbar.Collapse id="thivin">
                         <Nav className="ms-5">
                             <NavDropdown title="CustomerDetails" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="Createaccount"><CreditScoreIcon></CreditScoreIcon>Create New Account</NavDropdown.Item>
-                                <NavDropdown.Item href="Display"><ReceiptLongIcon></ReceiptLongIcon>ListAll Transaction</NavDropdown.Item>
+                                <NavDropdown.Item href="Createaccount"><GroupAddIcon></GroupAddIcon>Create New Account</NavDropdown.Item>
+                                <NavDropdown.Item href="/"></NavDropdown.Item>
                             </NavDropdown>
 
                             <NavDropdown title="Transaction" id="basic-nav-dropdown" className="ms-5">

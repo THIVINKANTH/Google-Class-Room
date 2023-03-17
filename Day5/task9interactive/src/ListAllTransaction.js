@@ -60,6 +60,9 @@ export const ListAlltran=()=>
                 </div>
             </div>
         </div>
+        <div className="row justify-content-center mt-3">
+            <button className="btn btn-outline-primary col-2">Filter</button>
+        </div>
         </>
     )
 }

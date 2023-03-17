@@ -53,6 +53,11 @@ export const Login=()=>
                                 sessionStorage.setItem("auth",user.username)
                                 window.location.assign("/")
                             }
+                            else if(user.username==="Pradeep" && user.password==="12345")
+                            {
+                                sessionStorage.setItem("auth",user.username)
+                                window.location.assign("/")
+                            }
                             else{
                                 alert("invalid values")
                             }
