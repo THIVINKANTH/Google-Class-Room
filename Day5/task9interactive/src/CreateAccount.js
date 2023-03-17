@@ -28,7 +28,7 @@ export const NewAccount=()=>
             }
         )
     }
-    const register=async()=>
+    const register=()=>
     {
         alert('Welcome to Zealous Bank'+JSON.stringify(process))
         create1(process);
