@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransactionLimit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+        <!-- Transaction Details -->
+    <h1 class="text-center mt-5">Your Transactions</h1>
+    <!-- Form for amount to debit or credit -->
+    <form class="container mt-5 pt-5 bg-light border col-lg-4 shadow" id="transaction">
+    <div class="mb-4 col-lg-12 m-auto">
+        <label for="amount" class="form-label fs-5">TransactionId</label>
+        <input
+          type="number"
+          class="form-control"
+          id="transId"
+          placeholder="EX:143"
+          required
+        />
+      </div>
+    <div class="mb-4 col-lg-12 m-auto">
+        <label for="amount" class="form-label fs-5">Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="transDate"
+          placeholder="Eg:05-07-1999"
+          required
+        />
+      </div>
+      <!-- Enter amount section -->
+      <div class="mb-4 col-lg-12 m-auto">
+        <label for="amount" class="form-label fs-5">TransactionAmount</label>
+        <input
+          type="number"
+          class="form-control"
+          id="amount"
+          placeholder="EX: 500"
+          required
+        />
+      </div>
+      <!-- Submit button -->
+      <div class="text-center my-3">
+        <button class="btn btn-danger mx-3" type="submit" id="debit" onchange="Limit()">
+          Debit
+        </button>
+        <button class="btn btn-success mx-3" type="submit" id="credit">
+          Credit
+        </button>
+      </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

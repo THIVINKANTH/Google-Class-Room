@@ -1,19 +1,17 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react'
-import { create } from './TranasctionDetails'
-import './Pagedesign.css'
+import { upadate } from './TranasctionDetails'
 
-export const NewPayment=()=>
+export const Updating=(myvalue)=>
 {
-    // new transaction form
+    const[pos,setPos]=useState(myvalue.who)
     const[process,setProcess]=useState({
-        "transId":"",
-        "transType":"",
-        "transMode":"",
-        "transAmount":"",
-        "transDate":"",
-        "toPay":""
+        "transId":myvalue.mention.transId,
+        "transType":myvalue.mention.transType,
+        "transMode":myvalue.mention.transMode,
+        "transAmount":myvalue.mention.transAmount,
+        "transDate":myvalue.mention.transDate,
+        "toPay":myvalue.mention.toPay
     })
     const track=(data)=>
     {
@@ -30,16 +28,16 @@ export const NewPayment=()=>
     }
     const register=()=>
     {
-        alert('Welcome to Zealous Bank'+JSON.stringify(process))
-        create(process);
+        upadate(process,pos)
+        upadate("your transaction is updated")
     }
     const reset=()=>
     {
-        alert('Payment failed')
+        alert('Rejected....!')
     }
     return(
         <>
-        <div className="container">
+            <div className="container">
             <div className="row justify-content-center">
                 <div className="col-lg-8 col-md-10 col-sm-12 shadow-lg p-3">
                     <h3 className="mt-5 mb-5 text-warning fw-bolder">New Payment</h3>

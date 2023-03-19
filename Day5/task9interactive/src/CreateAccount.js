@@ -1,16 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react'
-import { create1 } from './TranasctionDetails'
+import { create1 } from './CustomerDetails'
 import './Pagedesign.css'
 export const NewAccount=()=>
 {
+    // form fildes
     const[process,setProcess]=useState({
-        "acNumber":0,
+        "acNumber":"",
         "acHolder":"",
-        "cusAadhar":0,
+        "cusAadhar":"",
         "cusPan":"",
-        "acBalance":0,
-        "cusContact":0,
+        "acBalance":"",
+        "cusContact":"",
         "cusEmail":"",
         "cusUserid":"",
         "cusPassword":""
@@ -28,6 +29,7 @@ export const NewAccount=()=>
             }
         )
     }
+    // create new form method
     const register=()=>
     {
         alert('Welcome to Zealous Bank'+JSON.stringify(process))
@@ -39,6 +41,7 @@ export const NewAccount=()=>
     }
     return(
         <>
+        {/* create new account form  */}
             <div className="container">
             <div className="row justify-content-center">
                 <div className="col-lg-8 col-md-10 col-sm-12 shadow-lg p-3">
@@ -50,6 +53,7 @@ export const NewAccount=()=>
                             name="acNumber"
                             onChange={track}
                             value={process.acNumber}
+                            id="acnumber"
                             className="form-control" required/>
                         </div>
                         <div className="row">
@@ -58,6 +62,7 @@ export const NewAccount=()=>
                             name="acHolder"
                             onChange={track}
                             value={process.acHolder}
+                            id="acholder"
                             className="form-control" required/>
                         </div>
                         <div className="row">
@@ -66,6 +71,7 @@ export const NewAccount=()=>
                             name="cusAadhar"
                             onChange={track}
                             value={process.cusAadhar}
+                            id="aadhar"
                             className="form-control" required/>
                         </div>
                         <div className="row">
@@ -74,6 +80,7 @@ export const NewAccount=()=>
                             name="cusPan"
                             onChange={track}
                             value={process.cusPan}
+                            id="pannumber"
                             className="form-control" required/>
                         </div>
                         <div className="row">
@@ -82,6 +89,7 @@ export const NewAccount=()=>
                             name="acBalance"
                             onChange={track}
                             value={process.acBalance}
+                            id="acbalance"
                             className="form-control" />
                         </div>
                         <div className="row">
@@ -90,6 +98,7 @@ export const NewAccount=()=>
                             name="cusContact"
                             onChange={track}
                             value={process.cusContact}
+                            id="contact"
                             className="form-control" required/>
                         </div>
                         <div className="row">
@@ -98,6 +107,7 @@ export const NewAccount=()=>
                             name="cusEmail"
                             onChange={track}
                             value={process.cusEmail}
+                            id="email"
                             className="form-control" required/>
                         </div>
                         <div className="row">
@@ -106,6 +116,7 @@ export const NewAccount=()=>
                             name="cusUserid"
                             onChange={track}
                             value={process.cusUserid}
+                            id="cusid"
                             className="form-control" required/>
                         </div>
                         <div className="row">
@@ -114,11 +125,12 @@ export const NewAccount=()=>
                             name="cusPassword"
                             onChange={track}
                             value={process.cusPassword}
+                            id="cuspassword"
                             className="form-control" required/>
                         </div>
                         <div className="row justify-content-around mt-5">
-                            <button className="btn btn-outline-success col-4 ms-3" onClick={register} type="submit" value="Register">Register</button>
-                            <button className="btn btn-outline-danger col-4 ms-3" onClick={reset} type="reset" value="Cancel">Cancel</button>
+                            <button className="btn btn-outline-success col-4 ms-3" onClick={register} type="submit" value="Register" >Register</button>
+                            <button className="btn btn-outline-danger col-4 ms-3" onClick={reset} type="reset" value="Cancel" >Cancel</button>
                         </div>
                     </div>
                 </div>

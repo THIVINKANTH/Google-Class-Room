@@ -1,18 +1,18 @@
 // default transaction details
 let Transactiondetails=[
     {
-        "transId":1234,
+        "transId":"1234",
         "transType":"NEFT",
         "transMode":"Debit",
-        "transAmount":25000,
+        "transAmount":"25000",
         "transDate":"15-03-2023",
         "toPay":"Thiya"
     },
     {
-        "transId":5678,
+        "transId":"5678",
         "transType":"NEFT",
         "transMode":"Credit",
-        "transAmount":5000,
+        "transAmount":"5000",
         "transDate":"15-03-2023",
         "toPay":"Thivin"
     }
@@ -36,22 +36,21 @@ export const remove=(index)=>
     })
     return Transactiondetails;
 }
-// customer Account Details
-let Customerdetails=[
-    {
-        "acNumber":"101516404243",
-        "acHolder":"Thivin",
-        "cusAadhar":1234569874512,
-        "cusPan":"ab12cd54",
-        "acBalance":5000.15,
-        "cusContact":9514594679,
-        "cusEmail":"thivinkanth@gmail.com",
-        "cusId":"KVB007",
-        "cusPassword":"Thivin@5799"
-    }
-]
-// create new account method
-export const create1=(data)=>
+// Read transaction
+export const read=(object)=>
 {
-    Customerdetails.push(data)
+    return Transactiondetails[object];
+}
+//Update transaction
+export const FetchExact=(index)=>
+{
+    const temp=Transactiondetails.filter((element)=>
+    {
+        return element.transId===index
+    })
+    return temp[0];
+}
+export const upadate=(data,pos)=>
+{
+    Transactiondetails[pos]=data;
 }

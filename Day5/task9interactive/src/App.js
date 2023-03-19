@@ -5,7 +5,6 @@ import { LandingPage } from "./Landing";
 import { ListAlltran } from "./ListAllTransaction";
 import { NewPayment } from "./NewTransForm";
 
-
 function App() {
   return (
     <>
@@ -15,7 +14,7 @@ function App() {
       <BrowserRouter>
       <Home/>
       <Routes>
-      <Route path="Createaccount" exact element={<NewAccount/>}/>
+        <Route path="Createaccount" exact element={<NewAccount/>}/>
         <Route path="newtransaction" exact element={<NewPayment/>}/>
         <Route path="Display" exact element={<ListAlltran/>}/>
       </Routes>

@@ -38,11 +38,11 @@ export const Login=()=>
             <div className="row justify-content-center mt-5 ">
                 <div className="col-lg-6 col-md-10 col-sm-12 p-5 shadow-lg" id="loginpage">
                     <div className="form-group">
-                        <label><PersonPinIcon></PersonPinIcon>UserName</label>
+                        <label id="user"><PersonPinIcon></PersonPinIcon>UserName</label>
                         <input type="text" onChange={onperform} value={user.username} name="username" placeholder="Enter username" className="form-control"/>
                     </div>
                     <div className="form-group">
-                        <label><LockResetIcon></LockResetIcon>Password</label>
+                        <label id="user"><LockResetIcon></LockResetIcon>Password</label>
                         <input type="password" onChange={onperform} value={user.password} name="password" placeholder="******" className="form-control"/>
                     </div>
                     <div className="row justify-content-around mt-3">
@@ -53,7 +53,7 @@ export const Login=()=>
                                 sessionStorage.setItem("auth",user.username)
                                 window.location.assign("/")
                             }
-                            else if(user.username==="Pradeep" && user.password==="12345")
+                            else if(user.username==="pradeep" && user.password==="12345")
                             {
                                 sessionStorage.setItem("auth",user.username)
                                 window.location.assign("/")
